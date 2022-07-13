@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-动态表格</title>
+    <style>
+      * {
+        text-decoration: none;
+      }
+      .add {
+        width: 800px;
+        margin: 0 auto;
+      }
+      .info {
+        width: 800px;
+        margin: 50px auto;
+      }
+      .info table {
+        width: 800px;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      .info table th,
+      .info table td {
+        border: 1px solid black;
+        height: 40px;
+      }
+      #btnAdd {
+        width: 80px;
+        height: 40px;
+        font-size: 20px;
+      }
+      td {
+        text-align: center;
+      }
+      #delChecked {
+        display: inline-block;
+        width: 100px;
+        color: white;
+        padding: 5px 0;
+        font-weight: bold;
+        border: 1px solid transparent;
+        background-color: red;
+        border-radius: 10px;
+      }
+      .del:hover,
+      .edit:hover,
+      .save:hover,
+      #delChecked:hover {
+        opacity: 0.6;
+        cursor: pointer;
+      }
+      .del {
+        display: inline-block;
+        color: white;
+        width: 50px;
+        padding: 5px 0;
+        font-weight: bold;
+        border: 1px solid transparent;
+        background-color: red;
+        border-radius: 10px;
+      }
+      .edit {
+        display: inline-block;
+        color: white;
+        width: 50px;
+        padding: 5px 0;
+        font-weight: bold;
+        border: 1px solid transparent;
+        background-color: mediumvioletred;
+        border-radius: 10px;
+      }
+      .save {
+        display: inline-block;
+        color: white;
+        width: 50px;
+        padding: 5px 0;
+        font-weight: bold;
+        border: 1px solid transparent;
+        background-color: darkgreen;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="add">
+      <fieldset>
+        <legend>添加数据</legend>
+        <label for="proId">商品编号：</label>
+        <input type="text" name="" id="proId" />
+        <br />
+        <label for="proName">商品名称：</label>
+        <input type="text" name="" id="proName" />
+        <br />
+        <label for="proPrice">商品价格：</label>
+        <input type="text" name="" id="proPrice" />
+        <p></p>
+        <input type="button" value="添加" id="btnAdd" />
+      </fieldset>
+    </div>
+    <div class="info">
+      <table id="tableInfo">
+        <thead>
+          <tr>
+            <th><input type="checkbox" name="" id="chkAll" />全选</th>
+            <th>商品编号</th>
+            <th>商品名称</th>
+            <th>商品价格</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="5">
+              <button id="delChecked">删除选中</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="js/01.js"></script>
+  </body>
+</html>
